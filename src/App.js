@@ -8,14 +8,14 @@ function App() {
   return (
     <>
       <Header />
-      <switch>
+      <Switch>
         <Route path="/signin">
           <Signin />
         </Route>
         <Route path="/signup">
           <Signup />
         </Route>
-      </switch>
+      </Switch>
     </>
   );
 }

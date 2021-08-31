@@ -1,9 +1,12 @@
 /* ./src/index.css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=fallback");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer utilities {
+  /* Buttons */
   .btn,
   .btn-sm {
     @apply font-medium inline-flex items-center justify-center border border-transparent rounded leading-snug transition duration-150 ease-in-out;
@@ -16,17 +19,131 @@
   .btn-sm {
     @apply px-4 py-2 shadow;
   }
-}
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  /* Topography */
+  .h1 {
+    @apply text-4xl font-extrabold leading-tight tracking-tighter;
+  }
+
+  .h2 {
+    @apply text-3xl font-extrabold leading-tight tracking-tighter;
+  }
+
+  .h3 {
+    @apply text-3xl font-bold leading-tight;
+  }
+
+  .h4 {
+    @apply text-2xl font-bold leading-snug tracking-tight;
+  }
+
+  @screen md {
+    .h1 {
+      @apply text-5xl;
+    }
+
+    .h2 {
+      @apply text-4xl;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Forms */
+  .form-input,
+  .form-textarea,
+  .form-multiselect,
+  .form-select,
+  .form-checkbox,
+  .form-radio {
+    @apply bg-white border border-gray-300 focus:border-gray-500;
+  }
+
+  .form-input,
+  .form-textarea,
+  .form-multiselect,
+  .form-select,
+  .form-checkbox {
+    @apply rounded;
+  }
+
+  .form-input,
+  .form-textarea,
+  .form-multiselect,
+  .form-select {
+    @apply py-3 px-4;
+  }
+
+  .form-input,
+  .form-textarea {
+    @apply placeholder-gray-500;
+  }
+
+  .form-select {
+    @apply pr-10;
+  }
+
+  .form-checkbox,
+  .form-radio {
+    @apply text-gray-800 rounded-sm;
+  }
+
+  /* Switch element */
+  .form-switch {
+    @apply relative select-none;
+    width: 68px;
+
+    label {
+      @apply block overflow-hidden cursor-pointer rounded;
+      height: 38px;
+
+      > span:first-child {
+        @apply absolute block rounded shadow;
+        width: 30px;
+        height: 30px;
+        top: 4px;
+        left: 4px;
+        right: 50%;
+        transition: all 0.15s ease-out;
+      }
+    }
+
+    input[type="checkbox"] {
+      &:checked {
+        + label {
+          @apply bg-blue-600;
+
+          > span:first-child {
+            left: 34px;
+          }
+        }
+      }
+    }
+  }
+
+  :focus,
+  button:focus,
+  .btn:focus,
+  .btn-sm:focus,
+  .form-input:focus,
+  .form-textarea:focus,
+  .form-multiselect:focus,
+  .form-select:focus,
+  .form-checkbox:focus,
+  .form-radio:focus {
+    outline: 2px solid rgba(#0070f4, 0.5);
+  }
+
+  .form-input,
+  .form-textarea,
+  .form-multiselect,
+  .form-select,
+  .form-checkbox,
+  .form-radio {
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
 }

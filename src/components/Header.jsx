@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [top, setTop] = useState(true);
   useEffect(() => {
+    console.log(window.pageYOffset);
     const scrollHandler = () => {
       window.pageYOffset > 10 ? setTop(false) : setTop(true);
     };
     window.addEventListener("scroll", scrollHandler);
     return window.removeEventListener("scroll", scrollHandler);
-  }, []);
+  }, [top]);
   return (
     <header
       className={`fixed w-full z-30 md:bg-opacity-90 trransition duration-300 ease-in-out ${
