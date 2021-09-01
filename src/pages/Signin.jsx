@@ -109,7 +109,7 @@ const Signin = () => {
                 <div className="flex flex-wrap -mx-3 mb-4">
                   <div className="w-full px-3">
                     <button className="btn px-0 text-white bg-google hover:bg-red-800 w-full relative">
-                      <FaGoogle className="w-4 h-4 fill-current text-white opacity-75 flex-shrink-0 mx-4 absolute left-1" />
+                      <FaGoogle className="w-4 h-4 opacity-75 flex-shrink-0 mx-4 absolute left-1" />
                       Continue with Google
                     </button>
                   </div>
