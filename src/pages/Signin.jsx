@@ -1,3 +1,6 @@
+import { AiFillGithub } from "react-icons/ai";
+import { FaGoogle } from "react-icons/fa";
+
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
 
@@ -10,7 +13,7 @@ const Signin = () => {
       {/* Main Page Content */}
       <main className="flex-grow">
         <section className="bg-gradient-to-b from-gray-100 to-white">
-          <div className="max-w-6xl mx-autp px-4 smLpx-6">
+          <div className="max-w-6xl mx-auto px-4 smLpx-6">
             <div className="pt-32 pb-12 md:pt-40 md:pb-20">
               {/* Page Header */}
               <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
@@ -90,6 +93,41 @@ const Signin = () => {
                     aria-hidden="true"
                   ></div>
                   <div className="text-gray-600 italic">Or</div>
+                  <div
+                    className="border-t border-gray-300 flex-grow ml-3"
+                    aria-hidden="true"
+                  ></div>
+                </div>
+                <div className="flex flex-wrap -mx-3 mb-4">
+                  <div className="w-full px-3">
+                    <button className="btn px-0 text-white bg-github hover:bg-black w-full relative">
+                      <AiFillGithub className="w-4 h-4 fill-current text-white opacity-75 flex-shrink-0 mx-4 absolute left-1" />
+                      Continue with Github
+                    </button>
+                  </div>
+                </div>
+                <div className="flex flex-wrap -mx-3 mb-4">
+                  <div className="w-full px-3">
+                    <button className="btn px-0 text-white bg-google hover:bg-red-800 w-full relative">
+                      <FaGoogle className="w-4 h-4 fill-current text-white opacity-75 flex-shrink-0 mx-4 absolute left-1" />
+                      Continue with Google
+                    </button>
+                  </div>
+                </div>
+                <div className="flex items-center my-6 font-medium">
+                  <div
+                    className="border-t border-gray-300 flex-grow mr-3"
+                    aria-hidden="true"
+                  ></div>
+                  <div className="text-gray-600">
+                    Don't have a account?{" "}
+                    <Link
+                      to="/signup"
+                      className="text-blue-600 hover:underline transition duration-150 ease-in-out"
+                    >
+                      Signup
+                    </Link>
+                  </div>
                   <div
                     className="border-t border-gray-300 flex-grow ml-3"
                     aria-hidden="true"
