@@ -1,14 +1,16 @@
 import "./App.css";
-import Header from "./components/Header";
 import Signin from "./pages/Signin";
 import { Route, Switch } from "react-router";
 import Signup from "./pages/Signup";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <>
-      <Header />
       <Switch>
+        <Route path="/" exact>
+          <HomePage />
+        </Route>
         <Route path="/signin">
           <Signin />
         </Route>
