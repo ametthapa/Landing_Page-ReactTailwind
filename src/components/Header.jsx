@@ -20,7 +20,7 @@ const Header = () => {
     >
       <div className="max-w-6xl mx-auto px-5 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Site Branding */}
+          {/* Site Branding  Gradient*/}
           <div>
             {/* Logo */}
             <Link to="/">
