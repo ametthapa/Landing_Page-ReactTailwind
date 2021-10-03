@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import Transition from "../utils/Transition.js";
 
 const Modal = ({ children, id, ariaLabel, show, handleClose }) => {
@@ -63,4 +63,17 @@ const Modal = ({ children, id, ariaLabel, show, handleClose }) => {
       </Transition>
     </>
   );
+};
+
+export default Modal;
+
+Modal.propTypes = {
+  children: propTypes.oneOfType([
+    propTypes.arrayOf(propTypes.element),
+    propTypes.element.isRequired,
+  ]),
+  id: propTypes.string,
+  arialLabel: propTypes.string,
+  show: propTypes.isRequired,
+  handleClose: propTypes.func.isRequired,
 };
